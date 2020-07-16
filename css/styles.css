@@ -1,0 +1,123 @@
+@import 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@600&display=swap';
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: normal;
+    font-size: 14px;
+    /* letter-spacing: 1px; */
+}
+
+
+main {
+    display: grid;
+    grid-template: 50px 250px 150px 100px 1fr / 80px 1fr 50px 1fr;
+    background: white;
+    height: 100vh;
+}
+main .item {
+    /* border: 1px solid lightskyblue; */
+    background:  white;;
+}
+.item:nth-of-type(1) {
+    grid-row: 1 / span 5;
+    grid-column: 1 / 2;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.item:nth-of-type(1) img {
+    cursor: pointer;
+}
+.item:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 22px;
+    font-size: 17px;
+}
+
+.item:nth-of-type(3) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    background-color: transparent;
+    z-index: 1;
+}
+.item:nth-of-type(3) h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 45px;
+    line-height: 40px;
+    letter-spacing: normal;
+}
+.item:nth-of-type(4) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.item:nth-of-type(4) h2 {}
+
+.item:nth-of-type(5) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.item:nth-of-type(5) .contain-input{
+    flex-direction: row;
+    padding-top: 20px;
+    font-size: 16px;
+}
+/* .item:nth-of-type(5) .input-hidden {
+    display: none;
+}
+.item:nth-of-type(5) .input-show {
+    background: url("http://monsterbranding.com.mx/images/dot-inactive.png");
+    width: 50px;
+    height: 50px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.item:nth-of-type(5) span{
+    padding-left: 10px;
+}
+.item:nth-of-type(6) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.item:nth-of-type(6) span {
+    padding-left:50px ;
+    cursor: pointer;
+}
+.item:nth-of-type(7) {
+    grid-row: 1 / span 5;
+    grid-column: 3 / span 4;
+    background: url('http://monsterbranding.com.mx/images/bottle.png');
+    background-color: #f6f5e8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+@media (max-width: 600px) {
+    .item:nth-of-type(7) {
+        background-size: 130%;
+    }
+}
